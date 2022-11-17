@@ -7,7 +7,7 @@ require("dotenv").config();
 
 module.exports = async client => {
     client.commands = new discord.Collection();
-    client.config = await JSON.parse(fs.readFileSync(`${process.env.SMARTY_HOME}/.config`));
+    client.config = await JSON.parse(fs.readFileSync(`${process.env.SMARTY_CFG_DIR}/.config`));
     
     const commands = [];
     const files = fs.readdirSync(utils.path.commands);
