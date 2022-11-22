@@ -1,1 +1,0 @@
-module.exports = (content, length) => (content.length > length) ? content.slice(0, length) + "..." : content;
